@@ -1,16 +1,19 @@
 <template>
   <div class="container">
     <BarChart />
+    <LACityParkingData />
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
 import BarChart from '~/components/BarChart.vue'
+import LACityParkingData from '~/components/LACityParkingData.vue'
 
 export default {
   components: {
-    BarChart
+    BarChart,
+    LACityParkingData
   }
 }
 </script>
