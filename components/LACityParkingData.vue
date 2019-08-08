@@ -5,6 +5,9 @@
 </template>
 
 <script>
+// Documentation for API
+// https://data.lacity.org/A-Safe-City/Arrest-Data-from-2010-to-Present/yru6-6re4
+
 import axios from 'axios'
 import * as d3 from 'd3'
 

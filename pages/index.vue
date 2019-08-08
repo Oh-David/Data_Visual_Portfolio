@@ -1,7 +1,11 @@
 <template>
-  <div class="container">
-    <BarChart />
+  <div>
     <LACityParkingData />
+    <div class="container">
+      <div class="barchart-container">
+        <BarChart />
+      </div>
+    </div>
   </div>
 </template>
 
