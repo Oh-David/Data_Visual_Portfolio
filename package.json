@@ -1,0 +1,17 @@
+{
+  "name": "d3_portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio to showcase charts, graphs, maps using D3js",
+  "author": "David Oh",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
