@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Bar Chart</h1>
+    <h1>Crime Histogram</h1>
     <div id="bar-chart">
       <!-- Bar Chart gets drawn here. -->
     </div>
@@ -40,7 +40,7 @@ import LACityParkingData from '~/components/LACityParkingData.vue';
         console.log(data);
         // Counts Sex (Male / Female)
         var countSex = alasql('SELECT INDEX sex_cd, COUNT(*) AS cnt FROM ? GROUP BY sex_cd', [data]);
-
+        
         console.log(countSex);
 
         x.domain(data.map(function(d) { return d.arst_typ_cd }));
@@ -52,9 +52,9 @@ import LACityParkingData from '~/components/LACityParkingData.vue';
           .enter().append("rect")
           .attr("class", "bar")
           .attr("x", function(d) { return x(d.arst_typ_cd); })
-          .attr("width", x.bandwidth())
+          .attr("width", (x.bandwidth()/2)) // x.bandwidth()
           .attr("y", function(d) { return y(d.age); })
-          .attr("height", function(d) { return height - y(d.age); });
+          .attr("height", function(d) { return height - y(d.age) ; });
 
         svg.append("g")
           .attr("transform", "translate(0," + height + ")")

@@ -2,7 +2,10 @@
   <div>
     <LACityParkingData />
     <div class="container">
-      <div class="barchart-container">
+      <div id="crimeheatmap-container">
+        <CrimeHeatMap />
+      </div>
+      <div id="barchart-container">
         <BarChart />
       </div>
     </div>
@@ -10,15 +13,32 @@
 </template>
 
 <script>
+// import * as Vue2Leaflet from 'vue2-leaflet';
+// var { LMap, LTileLayer, LMarker } = Vue2Leaflet;
+
 import Logo from '~/components/Logo.vue'
 import BarChart from '~/components/BarChart.vue'
+import CrimeHeatMap from '~/components/CrimeHeatMap.vue'
 import LACityParkingData from '~/components/LACityParkingData.vue'
 
 export default {
   components: {
     BarChart,
-    LACityParkingData
-  }
+    CrimeHeatMap,
+    LACityParkingData,
+    // LMap,
+    // LTileLayer,
+    // LMarker,
+  },
+  // data() {
+  //   return {
+  //     zoom: 20,
+  //     center: L.latLng(34.0522, 118.2437),
+  //     url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+  //     attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+  //     marker: L.latLng(34.0522, 118.2437)
+  //   }
+  // },
 }
 </script>
 
@@ -52,5 +72,10 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+#crimeheatmap-container {
+  height: 600px;
+  height: 600px;
 }
 </style>

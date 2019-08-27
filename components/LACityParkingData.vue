@@ -33,6 +33,7 @@ import { eventBus } from '~/plugins/eventBus.js'
             chrg_grp_cd: d.chrg_grp_cd,
             descent_cd: d.descent_cd,
             crsst: d.crsst,
+            location: d.location_1,
             sex_cd: d.sex_cd,
             grp_description: d.grp_description
           }
